@@ -53,13 +53,13 @@
         <dependency>
             <groupId>org.adridadou</groupId>
             <artifactId>eth-propeller-core</artifactId>
-            <version>0.8-SNAPSHOT</version>
+            <version>0.7</version>
         </dependency>
 
         <dependency>
             <groupId>org.adridadou</groupId>
             <artifactId>eth-propeller-ethj</artifactId>
-            <version>0.8-SNAPSHOT</version>
+            <version>0.7</version>
             <scope>test</scope>
         </dependency>
 
