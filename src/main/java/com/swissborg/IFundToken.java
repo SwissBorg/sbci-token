@@ -27,9 +27,7 @@ public interface IFundToken {
 
     CompletableFuture<Void> retrieveEther();
 
-    BigInteger _unit();
-
-    BigInteger _decimals();
-
     CompletableFuture<Void> transferOwnership(EthAccount newOwner);
+
+    CompletableFuture<Void> triggerTransferEvent();
 }

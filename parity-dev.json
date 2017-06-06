@@ -1,0 +1,33 @@
+{
+  "name": "DevelopmentChain",
+  "engine": {
+    "instantSeal": { "params": {} }
+  },
+  "params": {
+    "accountStartNonce": "0x0",
+    "maximumExtraDataSize": "0x20",
+    "minGasLimit": "0x1388",
+    "networkID" : "0x10"
+  },
+  "genesis": {
+    "seal": {
+      "generic": "0x0"
+    },
+    "difficulty": "0x20000",
+    "author": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x",
+    "gasLimit": "0x5B8D80"
+  },
+  "accounts": {
+    "0000000000000000000000000000000000000001": { "balance": "1", "builtin": { "name": "ecrecover", "pricing": { "linear": { "base": 3000, "word": 0 } } } },
+    "0000000000000000000000000000000000000002": { "balance": "1", "builtin": { "name": "sha256", "pricing": { "linear": { "base": 60, "word": 12 } } } },
+    "0000000000000000000000000000000000000003": { "balance": "1", "builtin": { "name": "ripemd160", "pricing": { "linear": { "base": 600, "word": 120 } } } },
+    "0000000000000000000000000000000000000004": { "balance": "1", "builtin": { "name": "identity", "pricing": { "linear": { "base": 15, "word": 3 } } } },
+    "0x4615ff6690a3bb23bd85051c5c69abba4092bbb4": { "balance": "1000000000000000000000" },
+    "0x5706f06887f5f2a17edc444e122ebed1d5da2e7b": { "balance": "1000000000000000000000" },
+    "0xe2f8a351678d4264df0522d3d61d83258ce83daf": { "balance": "1000000000000000000000" },
+    "0x41c0b08962537ca31457eaee11e23f155a3c00f4": { "balance": "1000000000000000000000" }
+  }
+}

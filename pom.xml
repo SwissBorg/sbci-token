@@ -52,20 +52,13 @@
 
         <dependency>
             <groupId>org.adridadou</groupId>
-            <artifactId>eth-propeller-core</artifactId>
-            <version>0.7</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.adridadou</groupId>
             <artifactId>eth-propeller-ethj</artifactId>
             <version>0.7</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.adridadou</groupId>
-            <artifactId>eth-contract-api</artifactId>
+            <artifactId>eth-propeller-web3j</artifactId>
             <version>0.7</version>
         </dependency>
 

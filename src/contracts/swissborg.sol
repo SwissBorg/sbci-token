@@ -12,8 +12,8 @@ contract SwissBorgFund is ERC20{
 
     string _name; 
     string _symbol;
-    uint8 public _decimals = 18;
-    uint128 public _unit = 1000000000000000000;
+    uint8 _decimals = 18;
+    uint128 _unit = 1000000000000000000;
 
     /*constructor*/
     function SwissBorgFund(string name, string symbol, uint256 initialPriceInWei) {
@@ -54,34 +54,34 @@ contract SwissBorgFund is ERC20{
         return _approvals[src][guy];
     }
     
-    function transfer(address dst, uint weiAmnt) returns (bool) {
-        assert(_balances[msg.sender] >= weiAmnt);
+    function transfer(address dst, uint tokenAmount) returns (bool) {
+        assert(_balances[msg.sender] >= tokenAmount);
         
-        _balances[msg.sender] -= weiAmnt;
-        _balances[dst] += weiAmnt;
+        _balances[msg.sender] -= tokenAmount;
+        _balances[dst] += tokenAmount;
         
-        Transfer(msg.sender, dst, weiAmnt);
-        
-        return true;
-    }
-    
-    function transferFrom(address src, address dst, uint weiAmnt) returns (bool) {
-        assert(_balances[src] >= weiAmnt);
-        assert(_approvals[src][msg.sender] >= weiAmnt);
-        
-        _approvals[src][msg.sender] -= weiAmnt;
-        _balances[src] -= weiAmnt;
-        _balances[dst] += weiAmnt;
-        
-        Transfer(src, dst, weiAmnt);
+        Transfer(msg.sender, dst, tokenAmount);
         
         return true;
     }
     
-    function approve(address guy, uint256 weiAmnt) returns (bool) {
-        _approvals[msg.sender][guy] = weiAmnt;
+    function transferFrom(address src, address dst, uint tokenAmount) returns (bool) {
+        assert(_balances[src] >= tokenAmount);
+        assert(_approvals[src][msg.sender] >= tokenAmount);
         
-        Approval(msg.sender, guy, weiAmnt);
+        _approvals[src][msg.sender] -= tokenAmount;
+        _balances[src] -= tokenAmount;
+        _balances[dst] += tokenAmount;
+        
+        Transfer(src, dst, tokenAmount);
+        
+        return true;
+    }
+    
+    function approve(address guy, uint256 tokenAmount) returns (bool) {
+        _approvals[msg.sender][guy] = tokenAmount;
+        
+        Approval(msg.sender, guy, tokenAmount);
         
         return true;
     }
@@ -98,13 +98,20 @@ contract SwissBorgFund is ERC20{
         uint256 tokens = (msg.value * _unit) / priceInWei;
         _balances[msg.sender] += tokens;
         _totalSupply += tokens;
+        Transfer(this, msg.sender, tokens);
 
-        if(!_buyers[msg.sender]) NewBuyer(msg.sender);
-        _buyers[msg.sender] = true;
+        if(!_buyers[msg.sender]) {
+            NewBuyer(msg.sender);
+            _buyers[msg.sender] = true;
+        }
     }
 
     function() payable {
         buy();
+    }
+
+    function triggerTransferEvent() {
+        Transfer(0x0, 0x0, 0);
     }
 
     /** get all the ETH that was sent to this contract*/
