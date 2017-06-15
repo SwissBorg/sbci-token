@@ -17,6 +17,7 @@ import rx.Observable;
 import java.io.File;
 import java.math.BigInteger;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
@@ -47,10 +48,9 @@ public class TokenFundTest {
         }
 
         if(testMode.equals(TestModes.TESTRPC)){
-            ethereumFacade = RpcEthereumFacadeProvider.forRemoteNode("http://localhost:8585", new ChainId(16),
-                    new EthereumRpcConfig(true, 1000, "", 1000));
+            ethereumFacade = RpcEthereumFacadeProvider.forRemoteNode("http://localhost:8545", new ChainId(16),
+                    EthereumRpcConfig.config().pollBlocks(true).pollingFrequence(2, TimeUnit.SECONDS).build());
         }
-
 
     }
 
