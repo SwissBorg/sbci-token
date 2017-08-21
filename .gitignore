@@ -1,5 +1,10 @@
-/.idea
-/out
-/logs
-/database
-/bin
+.idea
+out
+logs
+database
+bin
+node_modules
+build
+package-lock.json
+*.help
+*.iml

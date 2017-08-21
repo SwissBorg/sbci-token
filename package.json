@@ -1,0 +1,28 @@
+{
+  "name": "swiss-borg-coin-investment",
+  "version": "1.0.0",
+  "description": "This is the SBCI token smart contract.",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bignumber.js": "^4.0.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commodityadnetwork/CDX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/commodityadnetwork/CDX/issues"
+  },
+  "homepage": "https://github.com/commodityadnetwork/CDX#readme"
+}
