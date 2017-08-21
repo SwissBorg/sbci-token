@@ -2,7 +2,7 @@ var Token = artifacts.require("./Token.sol");
 var TokenLogic = artifacts.require("./TokenLogic.sol");
 
 module.exports = function (deployer) {
-  deployer.deploy(Token, "Network", "CDX").then(function () {
+  deployer.deploy(Token, "SwissBorb", "SBC").then(function () {
     console.log("deployment log Token address is", Token.address);
     return Token.address;
   }).then(function () {

@@ -95,7 +95,6 @@ contract Token is ERC20, Stoppable {
     }
 
     function() payable {
-        require(msg.data.length >= 32 + 32 + 4);
         require(msg.value > 0);
         logic.handlePayment.value(msg.value)(msg.sender);
     }

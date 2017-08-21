@@ -155,7 +155,7 @@ contract TokenLogic is ERC20Events, Math, Stoppable {
 
     function payout(address dst) auth {
         require(dst != address(0));
-        require(dst.transfer(this.balance));
+        dst.transfer(this.balance);
     }
 
 }
