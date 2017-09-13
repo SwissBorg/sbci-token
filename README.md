@@ -1,11 +1,11 @@
-#SMART CONTRACT MVP
+# SMART CONTRACT MVP
 
-##Introduction
+## Introduction
 
 SBCI (SwissBorg Cyborg Index) is a compilation of smart contracts which enables any investor to get a direct exposure to a diversified range of investment strategies. 
 This package contains Ethereum Solidity smart contracts to manage SBCI Index. It can be used to create, transfer and redeem SBCI tokens. This token implements the core ERC-20 standard functionality.
 
-##Interacting with SBCI smart contract
+## Interacting with SBCI smart contract
 
 You can interact with SBCI smart contract using :
 * MyEtherWallet
@@ -21,7 +21,7 @@ You can interact with SBCI smart contract using :
 * Smart contract (Logic) address : [0x1c1Ca4c3E0634999137641339d59eAF904355DAE](https://etherscan.io/address/0x1c1Ca4c3E0634999137641339d59eAF904355DAE)
     * [click here for the ABI](https://raw.githubusercontent.com/SwissBorg/sbci-token/master/bin/contracts/TokenLogic.abi)
 
-##Interacting with SBCI smart contract
+## Interacting with SBCI smart contract
 
 ![Slide 1](docs/interact01.jpg?raw=true "Slide 1")
 ![Slide 2](docs/interact02.jpg?raw=true "Slide 2")
