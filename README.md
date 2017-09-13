@@ -23,8 +23,8 @@ You can interact with SBCI smart contract using :
 
 ##Interacting with SBCI smart contract
 
-![Slide 1](docs/interact01.svg?raw=true "Slide 1")
-![Slide 1](docs/interact02.svg?raw=true "Slide 2")
-![Slide 1](docs/interact03.svg?raw=true "Slide 3")
-![Slide 1](docs/interact04.svg?raw=true "Slide 4")
-![Slide 1](docs/interact05.svg?raw=true "Slide 5")
+![Slide 1](docs/interact01.jpg?raw=true "Slide 1")
+![Slide 2](docs/interact02.jpg?raw=true "Slide 2")
+![Slide 3](docs/interact03.jpg?raw=true "Slide 3")
+![Slide 4](docs/interact04.jpg?raw=true "Slide 4")
+![Slide 5](docs/interact05.jpg?raw=true "Slide 5")
